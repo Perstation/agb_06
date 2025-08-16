@@ -18,8 +18,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 36px;
-  margin-right: calc(calc(101 / 1920) * 100vw);
+  width: 744px;
+  margin: 0 auto 36px;
+  padding-right: 116px;
 }
 
 .wrapper .logo-container .logo {
@@ -31,10 +32,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .wrapper .title-container .title {
   width: 744px;
+  z-index: 2;
 }
 
 .wrapper .btn-container {
@@ -51,10 +54,11 @@ body {
   width: 741px;
   height: 401px;
   margin: -300px -140px;
-  z-index: -1;
+  z-index: 1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
 .wrapper .btn-container .btn:nth-child(1) {
@@ -83,6 +87,7 @@ body {
   background-image: url('./images/bt_3.png');
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 
 /** tablet */
@@ -92,7 +97,6 @@ body {
   }
   .wrapper .logo-container {
     margin-bottom: 40px;
-    margin-right: calc(calc(95 / 1440) * 100vw);
   }
 }
 
@@ -103,10 +107,13 @@ body {
   }
   .wrapper .logo-container {
     margin-bottom: 38px;
-    margin-right: calc(calc(53 / 700) * 100vw);
+    padding-right: 90px;
   }
   .wrapper .logo-container .logo {
     width: 275px;
+  }
+  .wrapper .title-container {
+    margin-bottom: 6px;
   }
   .wrapper .title-container .title {
     width: calc(100vw - 90px);
@@ -114,21 +121,21 @@ body {
   .wrapper .desc-container {
     font-size: 25px;
   }
-
+  .wrapper .btn-container {
+    flex-direction: column;
+    margin-bottom: 6px;
+    height: 150px;
+  }
   .wrapper .btn-container .btn {
-    width: calc(calc(508 / 700) * calc(100vw - 90px));
-    height: calc(calc(calc(508 / 700) * calc(100vw - 90px)) * calc(275 / 508));
-    margin: -300px -12vw;
+    width: calc(100vw - 64px);
+    margin: -100px;
   }
 }
 
 /** mobile */
 @media (max-width: 400px) {
   .wrapper .logo-container {
-    margin-right: 1vw;
-  }
-  .wrapper .btn-container .btn {
-    margin: -300px -8vw;
+    padding-right: 1vw;
   }
   .wrapper .desc-container {
     font-size: 20px;
