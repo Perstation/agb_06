@@ -58,7 +58,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .btn-container .btn > a {
+  width: 60%;
+  height: 30%;
 }
 
 .wrapper .btn-container .btn:nth-child(1) {
@@ -130,6 +136,9 @@ body {
     width: calc(100vw - 64px);
     margin: -100px;
   }
+  .wrapper .btn-container .btn > a {
+    width: 80%;
+  }
 }
 
 /** mobile */
@@ -139,5 +148,8 @@ body {
   }
   .wrapper .desc-container {
     font-size: 20px;
+  }
+  .wrapper .btn-container .btn > a {
+    width: 100%;
   }
 }
